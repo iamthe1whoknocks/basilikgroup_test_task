@@ -15,7 +15,7 @@ func New() *Config {
 
 func (c *Config) Init() error {
 
-	viper.AddConfigPath("../config")
+	viper.AddConfigPath("../../config")
 	viper.SetConfigName("config")
 	viper.SetConfigType("yaml")
 
