@@ -16,7 +16,7 @@ func main() {
 
 	}
 
-	err = routing.Run(viper.GetString("host"), viper.GetString("port"))
+	err = routing.Run(viper.GetString("port"))
 	if err != nil {
 		log.Fatal("Routing cant start : ", err)
 	}

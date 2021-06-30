@@ -8,7 +8,7 @@ import (
 )
 
 //Run - init and run web-server
-func Run(host, port string) error {
+func Run(port string) error {
 	e := echo.New()
 
 	e.HideBanner = true
@@ -22,5 +22,5 @@ func Run(host, port string) error {
 	api.GET("/mul", handler.Mul)
 	api.GET("/div", handler.Div)
 
-	return e.Start(fmt.Sprintf("%s:%s", host, port))
+	return e.Start(fmt.Sprintf(":%s", port))
 }
